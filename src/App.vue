@@ -1,11 +1,47 @@
-<script setup></script>
+<script setup>
+
+import { reactive } from 'vue';
+
+const bottle = reactive({
+  cap: 'red',
+  body: 'blue',
+  bottom: 'violet'
+})
+
+const changeColor = (part, color) => {
+  bottle[part] = color;
+}
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <Transition name="fade">
+  <RouterView :bottle="bottle" @change-color="changeColor" />
+  </Transition>
 </template>
 
-<style scoped></style>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI Variable Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+</style>
