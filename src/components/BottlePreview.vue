@@ -59,4 +59,8 @@ svg {
     transform: scale(1.2);
     transform-origin: center;
 }
+
+rect {
+    transition: fill 0.4s ease-in-out;
+}
 </style>
