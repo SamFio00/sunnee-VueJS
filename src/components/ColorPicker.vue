@@ -14,16 +14,16 @@ const changeColor = (color) => {
 }
 
 const colors = [
-  '#E63946', // Rosso corallo (tipo Hydro Flask)
-  '#2A9D8F', // Verde acqua/teal (molto popolare)
-  '#264653', // Blu navy profondo
-  '#E76F51', // Terracotta/arancio bruciato
-  '#F4A261', // Sabbia/beige caldo
-  '#8B4789', // Viola melanzana
-  '#457B9D', // Azzurro acciaio
-  '#010101', // Nero
-  '#6C757D', // Grigio grafite
-  '#F8F9FA', // Bianco sporco/crema
+'#8B0000', // Rosso metallico scuro
+'#D2691E', // Arancione bronzo
+'#B8860B', // Giallo oro scuro
+'#2F4F2F', // Verde bosco metallico
+'#4682B4', // Blu acciaio
+'#4B0082', // Indaco profondo
+'#6A0DAD', // Viola metallico
+'#8B4513', // Marrone rame (extra)
+'#2F4F4F', // Grigio antracite (extra)
+'#1C1C1C', // Nero grafite (extra)
 ]
 </script>
 

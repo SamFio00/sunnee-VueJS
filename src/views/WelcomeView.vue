@@ -10,7 +10,7 @@ const router = useRouter();
         <h1>Welcome to Sunnee's Family!</h1>
         <p>Thanks for your purchase!</p>
         <p>Your Gift is now ready to be personalized.</p>
-        <button @click="router.push('/step')">Personalize your bottle</button>
+        <button @click="router.push('/step')">Customize your bottle</button>
     </div>
 </template>
 

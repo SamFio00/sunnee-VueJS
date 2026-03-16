@@ -23,9 +23,12 @@ const changeColor = (part, color) => {
     <div class="container">
         
         <div class="left">
-            <h1>Personalize your bottle</h1>
+            <h1>Customize your bottle</h1>
             <div v-for="(step, index) in steps" :key="index" :class="['step', { active: index === currentStep}]" >
+                <div class="step-header">
                 <h2>{{ index + 1 }}. {{ step }}</h2>
+                <div class="color-dot" :style="{ backgroundColor: bottle[step] }"></div>
+                </div>
                 <ColorPicker v-if="index === currentStep" :part="step" @change-color="changeColor"/>
             </div>
 
@@ -64,6 +67,19 @@ const changeColor = (part, color) => {
 
     .step h2 {
         margin-bottom: 1rem;
+    }
+
+    .step-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .color-dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
     }
 
     button {

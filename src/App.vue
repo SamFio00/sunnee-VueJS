@@ -3,9 +3,9 @@
 import { reactive } from 'vue';
 
 const bottle = reactive({
-  cap: 'red',
-  body: 'blue',
-  bottom: 'violet'
+  Cap: 'grey',
+  Body: 'grey',
+  Bottom: 'grey'
 })
 
 const changeColor = (part, color) => {
