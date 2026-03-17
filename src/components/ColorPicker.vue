@@ -12,7 +12,7 @@ const emit = defineEmits(['change-color'])
 const changeColor = (color) => {
   emit('change-color', part, color)
 }
-
+// Define a list of colors 
 const colors = [
   '#8B0000', // dark red
   '#D2691E', // bronze
@@ -28,6 +28,7 @@ const colors = [
 
 </script>
 
+<!-- color picker -->
 <template>
   <div class="color-picker">
     <button

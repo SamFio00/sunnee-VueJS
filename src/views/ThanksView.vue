@@ -13,12 +13,14 @@ defineProps({
   <div class="container">
     <h1>Thank You!</h1>
 
+    <!-- Bottle preview -->
     <div class="finishedBottle">
       <h3>Your bottle:</h3>
       <BottlePreview :bottle="bottle" />
       <p><em>Your bottle is now ready to be shipped.</em></p>
     </div>
 
+    <!-- Credits -->
     <div class="credits">
       <div class="socials">
         <a
