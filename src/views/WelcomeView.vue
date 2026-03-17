@@ -11,8 +11,7 @@ const router = useRouter()
       <img src="/sea-and-sun.png" alt="Sunnee logo">
 
       <span class="brand">
-        SUNNEE
-        <span class="sub">kids</span>
+        SUNNEE<span class="sub">kids</span>
       </span>
     </div>
 
@@ -41,7 +40,7 @@ const router = useRouter()
 }
 
 .logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 img {
@@ -53,7 +52,6 @@ img {
 .brand {
   font-size: 4rem;
   font-weight: bold;
-  margin-right: 0.2rem;
 }
 
 .sub {
