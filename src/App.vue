@@ -2,25 +2,31 @@
 import { reactive } from 'vue'
 import { RouterView } from 'vue-router'
 
+// global state 
 const bottle = reactive({
   Cap: 'grey',
   Body: 'grey',
   Bottom: 'grey'
 })
 
+// Update bottle color
 const changeColor = (part, color) => {
   bottle[part] = color
 }
 </script>
 
 <template>
+
+  <!-- Background blobs -->
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="blob blob-3"></div>
   <div class="blob blob-4"></div>
 
+  <!-- Router view (with transition)-->
   <RouterView v-slot="{ Component }">
     <Transition name="fade" mode="out-in">
+      <!-- Pass state and events to view -->
       <component
         :is="Component"
         :bottle="bottle"

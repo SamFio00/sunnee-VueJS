@@ -6,7 +6,7 @@ const router = useRouter()
 
 <template>
   <div class="container">
-
+    
     <div class="logo">
       <img src="/sea-and-sun.png" alt="Sunnee logo">
 

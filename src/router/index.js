@@ -3,6 +3,7 @@ import WelcomeView from '@/views/WelcomeView.vue'
 import StepView from '@/views/StepView.vue'
 import ThanksView from '@/views/ThanksView.vue'
 
+// Application routes
 const routes = [
     {
         path: '/',

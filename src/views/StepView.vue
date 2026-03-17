@@ -9,9 +9,11 @@ defineProps({
 
 const emit = defineEmits(['change-color'])
 
+// Bottle selection
 const steps = ['Cap', 'Body', 'Bottom']
 const currentStep = ref(0)
 
+// Forward selected color
 const changeColor = (part, color) => {
   emit('change-color', part, color)
 }
@@ -19,10 +21,13 @@ const changeColor = (part, color) => {
 
 <template>
   <div class="container">
+
+    <!-- Bottle preview -->
     <div class="right">
       <BottlePreview :bottle="bottle" />
     </div>
 
+    <!-- Configurator -->
     <div class="left">
       <h1>Customize your bottle</h1>
 
@@ -49,7 +54,8 @@ const changeColor = (part, color) => {
           </Transition>
         </div>
       </div>
-
+      
+      <!-- Navigation -->
       <button v-if="currentStep > 0" @click="currentStep--">Back</button>
       <button v-if="currentStep < steps.length - 1" @click="currentStep++">Next</button>
       <button v-if="currentStep === steps.length - 1" @click="$router.push('/thanks')">
