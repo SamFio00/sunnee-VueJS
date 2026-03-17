@@ -3,7 +3,10 @@ import { ref } from 'vue'
 import ColorPicker from '@/components/ColorPicker.vue'
 import BottlePreview from '@/components/BottlePreview.vue'
 
-defineProps(['bottle'])
+defineProps({
+  bottle: Object
+})
+
 const emit = defineEmits(['change-color'])
 
 const steps = ['Cap', 'Body', 'Bottom']
@@ -71,25 +74,23 @@ const changeColor = (part, color) => {
   justify-content: center;
   align-items: center;
   order: -1;
-
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.22),
-    rgba(255,255,255,0.08)
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.08)
   );
-
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 28px;
-
-  box-shadow:0 8px 24px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.35);
-
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.35);
   padding: 1.5rem;
 }
 
-.right svg{
-    filter: drop-shadow(0 20px 20px rgba(0,0,0,0.15));
+.right svg {
+  height: 200px;
+  width: auto;
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.15));
 }
 
 .left {
@@ -114,10 +115,6 @@ h2 {
 
 .step.active {
   opacity: 1;
-}
-
-.step h2 {
-  margin-bottom: 0.5rem;
 }
 
 .step-header {
@@ -161,11 +158,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-svg {
-  height: 200px;
-  width: auto;
-}
-
 .accordion-enter-active,
 .accordion-leave-active {
   transition: all 0.3s ease;
@@ -191,7 +183,6 @@ svg {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 1.5rem;
     gap: 2rem;
   }
 
@@ -226,7 +217,6 @@ svg {
 
   .right svg {
     height: 500px;
-    width: auto;
     transform: translateY(20px);
   }
 
@@ -272,11 +262,6 @@ svg {
     margin-top: 2rem;
   }
 
-  svg {
-    height: 600px;
-    width: 250px;
-  }
-
   .left {
     padding-left: 2rem;
     width: 600px;
@@ -289,7 +274,8 @@ svg {
   }
 
   .right svg {
-
+    height: 600px;
+    width: 250px;
     transform: translateY(20px);
   }
 }

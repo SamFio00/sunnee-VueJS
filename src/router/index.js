@@ -14,7 +14,6 @@ const routes = [
         name: 'step',
         component: StepView
     },
-
     {   
         path: '/thanks',
         name: 'thanks',
