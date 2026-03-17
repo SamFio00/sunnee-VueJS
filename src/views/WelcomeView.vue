@@ -9,8 +9,8 @@ const router = useRouter();
     <div class="container">
         <div class="logo">
             <img src="/sea-and-sun.png" alt="sunnee logo">
-            <span class="brand">SUNNEE</span>
-            <span class="sub">kids</span>
+            <span class="brand">SUNNEE<span class="sub">kids</span></span>
+            
         </div>
         <h1>Welcome to Sunnee's Family!</h1>
         <p>Thanks for your purchase!</p>
@@ -35,8 +35,8 @@ const router = useRouter();
     }
 
     img {
-        width: 90px;
-        height: 90px;
+        width: 150px;
+        height: 150px;
         margin-right: 0.5rem;
         vertical-align: middle;
     }
@@ -92,9 +92,29 @@ const router = useRouter();
 
     @media (min-width: 768px) {
 
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .brand {
+            font-size: 7rem;
+        }
+
+        .sub {
+            font-size: 2rem;
+        }
+
+        img {
+            width: 280px;
+            height: 280px;
+        }
+
         
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         p {

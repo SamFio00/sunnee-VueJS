@@ -45,7 +45,7 @@ const changeColor = (part, color) => {
     min-width: 320px;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: #f8f8f8;
+    background-color: #f7f6e7;
   }
 
   .blob-1, .blob-2, .blob-3, .blob-4 {
