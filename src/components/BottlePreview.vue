@@ -34,7 +34,7 @@ const props = defineProps(['bottle'])
     
     <g>
         <!-- Logo-->
-        <image href="/sea-and-sun.svg" x="46" y="118" width="16" height="16" style="filter: brightness(0) invert(1);" />
+        <image href="/sea-and-sun-white.svg" x="46" y="118" width="16" height="16" />
 
         <text x="54" y="145" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" letter-spacing="1">SUNNEE</text>
         
