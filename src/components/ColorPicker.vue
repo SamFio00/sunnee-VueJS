@@ -37,15 +37,27 @@ const colors = [
     .color-picker {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .color-picker button {
-        width: 30px;
-        height: 30px;
-        border: black 1px solid;
+        width: 25px;
+        height: 25px;
+        border: transparent solid 2px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         border-radius: 50%;
         margin: 5px;
         cursor: pointer;
     }
+
+    .color-picker button:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 1024px) {
+    .color-picker button {
+        width: 30px;
+        height: 30px;
+    }
+}
 </style>
